@@ -3,7 +3,7 @@
 
 # How does it work
 
-Please add your "keyfile" in the project root to let the suite work
+Please add your "keyfile.gpg" in the project root to let the suite work, means
 
 As you can see in file `open.sh` I assume that you're mounting your remote folder in `/mnt/nas`,
 I'm also going to use `dm_name` as mapped name after opening the sec folder
@@ -21,6 +21,8 @@ I'm referring to the Archwiki:
 - keyfile
 
 I've created it using `dd if=/dev/urandom of=./keyfile bs=1kB count=1`, this will give you a keyfile of 1000B
+
+Than you can encrypt it using `gpg -o keyfile.gpg -c keyfile`
 
 - sec
 
